@@ -73,17 +73,20 @@
 
   - you should define font path on **--font_path** argument
 
+
   ```sh
   python3 inference.py --sentence "과일이 들어간 달달한 롱드링크가 먹고 싶어" --visualize --font_path "./fonts/NanumGothic.ttf"
 
   ```
 
   **Result**
+  
+  <img width="625" alt="스크린샷 2024-03-07 오전 12 29 46" src="https://github.com/AlongwithKiman/cocktailbert/assets/43671432/d21aa6f1-9b5a-464f-98eb-d3849f5ef31f">
 
 ## Fine-tuning
 
 ```sh
-python train.py --sentence "자기 전 한 잔으로 취하고 싶어" --visualize --font_path "./fonts/NanumGothic.ttf"
+python train.py
 
 ```
 
