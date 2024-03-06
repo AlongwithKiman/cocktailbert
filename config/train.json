@@ -1,0 +1,12 @@
+{
+  "seed": 42,
+  "data_path": "./data/cocktaildata_concat_scaled.csv",
+  "max_epoch": 10,
+  "num_gpus": 1,
+  "mode": "clean",
+  "save_path": "./checkpoints/030222",
+  "valid_size": 0.1,
+  "max_seq_len": 200,
+  "batch_size": 64,
+  "num_categories_per_class": [3, 3, 5]
+}

@@ -1,0 +1,5 @@
+{
+  "checkpoint_path": "./ckpt/concat.ckpt",
+  "cocktail_list_path": "./data/cocktail_csv_data.csv",
+  "num_categories_per_class": [3, 3, 5]
+}

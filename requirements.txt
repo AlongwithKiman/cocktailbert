@@ -1,0 +1,10 @@
+transformers 
+protobuf==3.20 
+scipy 
+scikit-learn
+tqdm
+pytorch_lightning
+Pillow==9.4.0
+pandas
+sentencepiece
+git+https://github.com/SKTBrain/KoBERT.git#egg=kobert_tokenizer&subdirectory=kobert_hf
