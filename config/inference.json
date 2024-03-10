@@ -1,5 +1,7 @@
 {
   "checkpoint_path": "./ckpt/checkpoint.ckpt",
   "cocktail_list_path": "./data/cocktail_csv_data.csv",
-  "num_categories_per_class": [3, 3, 5]
+  "num_size_category": 3,
+  "num_ABV_category": 3,
+  "num_color_category": 5
 }

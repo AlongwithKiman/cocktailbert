@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
 
     seed_everything(hparam.seed, workers=True)
-    num_categories_per_class = hparam.num_categories_per_class
+    num_categories_per_class = [hparam.num_size_category, hparam.num_ABV_category, hparam.num_color_category]
 
 
     # set data module

@@ -62,7 +62,7 @@ if __name__ == "__main__":
     for key, value in loaded_ckpt.items():
         loaded_model[key] = value
 
-    new_model = BERTClassification(hparam.num_categories_per_class)
+    new_model = BERTClassification([hparam.num_size_category, hparam.num_ABV_category, hparam.num_color_category])
     new_model.load_state_dict(loaded_model, strict=False)
     new_model.eval()
 

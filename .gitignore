@@ -3,3 +3,4 @@ data/cocktaildata_concat_scaled.csv
 fonts/
 lightning_logs/
 ckpt/
+.DS_Store
