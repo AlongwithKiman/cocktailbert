@@ -4,9 +4,32 @@
 
 - https://github.com/SKTBrain/KoBERT 에 공개된 모델을 바탕으로, 칵테일의 묘사 및 느낌에 관한 문장과 categorized information data를 활용하여 fine-tuning하여 사용자의 느낌을 기반으로 db 내 칵테일을 추천합니다.
 - 해당 기능은 칵테일 커뮤니티 사이트 tipsynight.site의 **AI에게 추천받기**를 통해서도 접할 수 있습니다.
-- Training Data: TODO
 
-- 사용된 Categorization
+### Data
+1. 각 항목 별 카테고리에 대응되는 형용사를 concat하여 만든 문장
+
+    ```python
+    size = 0, ABV = 0, color = 0
+    
+    --> [달달하고, 가볍고, 도수가 약하고 ...] [붉은, 빨간, 체리색의 ...] [롱 드링크, 양 많은 칵테일]
+    ```
+    
+2. Generative AI prompting을 통한 데이터 생성
+    
+    ```python
+    여름 햇살처럼 밝고 상쾌한 술을 찾고 있어.	                  size = 0, ABV = 1, color = 4
+    낭만적인 데이트 분위기가 떠오르는 로맨틱한 칵테일을 찾고 있어.   size = 0, ABV = 1, color = 0
+    샷으로 빠르게 마실 수 있는 강렬한 칵테일.	                  size = 2, ABV = 2, color = 3
+    ```
+    
+3. db 내 Image 데이터를 input으로 받는 multimodal LLM을 활용한 문장 생성
+    
+    ```python
+    애플 마티니: 이 칵테일은 진과 버몬트로 만든 클래식 마티니로, 가장자리에 얇은 레몬 조각을 얹은 차가운 잔에 담겨 제공됩니다. 
+    칵테일의 전체적인 분위기는 세련되고 세련된 느낌을 줍니다.
+    ```
+
+### 사용된 Categorization
 
   ```python
   size = {
@@ -89,7 +112,3 @@
 python train.py
 
 ```
-
-## License
-
-- TODO
