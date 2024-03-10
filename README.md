@@ -53,12 +53,9 @@
   }
   ```
 
-### Requirements
+### Requirements & Preparation
 
 - see [requirements.txt](https://github.com/AlongwithKiman/cocktailbert/blob/main/requirements.txt)
-
-### Get started
-
 - Install python packages and download checkpoint
 
   - you may need to install gdown, or you can download it from [ckpt drive link](https://drive.google.com/file/d/1olPNiRHSs1qzyHxFb72cR4Sw8OX87dSW/view)
